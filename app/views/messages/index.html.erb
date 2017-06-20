@@ -1,0 +1,20 @@
+ 
+
+<%  @message.each do |mess|   %>
+
+<div class="col-md-4">
+  <div class="message">
+      <h2 class= "message-title">  <%= mess.title %> </h2>
+      <%= link_to "view Message" , message_path(mess) , class:"btn-custom" %>
+  </div>
+</div>
+<%  end %>
+<br>
+<hr>
+<%= will_paginate @message,   renderer: BootstrapPagination::Rails   ,previous_label: "Older", next_label: "Newer", inner_window: 1, outer_window:0 %>
+
+<!-- 
+
+<%= will_paginate @message %>
+ -->
+

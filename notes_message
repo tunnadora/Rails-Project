@@ -1,0 +1,34 @@
+model -> Messge ( title:string , description:text)
+controller -> Messages
+
+=> resources :messages [ routes.rb ]
+
+ =>add_gem  1)simple_form 2)bootstrap-sass
+ 
+ {  goto bootstrap-sass homepage
+    change_in application.css.scss 
+    change_in application.js
+  }
+
+  { goto simple_form homepage
+    generate simple_form with bootstrap
+  }
+  
+
+  message_controller
+  => add new , create
+
+
+  to call show.html.erb  http://localhost:3000/messages/3
+
+
+<%= link_to "Edit Message" , edit_message_path(@message) %>
+
+=>add_gem 1)devise
+
+
+create migration to add user_id 
+one-to-many relation
+
+
+
